@@ -1,0 +1,218 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta name="format-detection" content="telephone=no" />
+<title>{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:sitekeywords}">
+<meta name="description" content="{pboot:sitedescription}">
+<meta name="author" content="www.adminbuy.cn k453" />
+<link href="{pboot:sitedomain}/skin/css/bootstrap.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/animate.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/slick.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/slick-theme.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+<script src="{pboot:sitedomain}/skin/js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/slick.min.js"></script>
+<style>
+.c_1530_4 .text h4, .tit_1 h3 {
+	font-family: 'ITC Avant Garde Gothic'!important;
+}
+</style>
+</head>
+<body>
+{include file=head.html}
+<div class="pz_banner">
+  <div class="slide_banner">
+    {pboot:slide gid=1 num=10}
+    <div {pboot:if([slide:i]==2)}style="display:none;"{/pboot:if}> 
+    <a href="javascript:void(0)"><img src="[slide:src]" width="100%" class="visible-lg" /></a> 
+    <a href="javascript:void(0)"><img src="[slide:src]" width="100%" class="hidden-lg"  /></a> 
+    </div>
+    {/pboot:slide}
+  </div>
+  <div class="dian"></div>
+  <div class="banner_ico"><a href="javascript:scrollTo('#main',0,300)"><img src="{pboot:sitedomain}/skin/picture/banner_ico.png" alt=""></a></div>
+</div>
+<!--mian-->
+<div id="main" class="pz_main">
+{pboot:sort scode=3}
+<div class="container-fluid">
+  <div class="container">
+    <div class="c_1530_1">
+      <div class="tit_1">
+        <h3>[sort:name]<span></span></h3>
+      </div>
+      <div class="row">
+        <div class="slide_pic_1">
+          {pboot:list scode=[sort:scode] num=8 order=sorting}
+          <div>
+            <li class="li_hp">
+              <div class="zbox"> <a href="[list:link]">
+                <div class="img"><img src="[list:ico]"></div>
+                <div class="text">
+                  <div class="name elli">[list:title]</div>
+                  <div class="p">[list:description]</div>
+                </div>
+                </a> </div>
+            </li>
+          </div>
+          {/pboot:list} </div>
+      </div>
+      <div class="arr">
+        <div class="zuo"></div>
+        <a href="[sort:link]" title="" class="more"></a>
+        <div class="you"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{/pboot:sort}
+{pboot:sort scode=8}
+<div class="container-fluid">
+  <div class="container">
+    <div class="c_1530_3">
+      <div class="tit_1">
+        <h3>[sort:name]<span></span></h3>
+      </div>
+      <div class="bd">
+        <div>
+          {pboot:list scode=[sort:scode] num=1 isico=1 order=sorting}
+          <div class="c_750"> <a href="[list:link]" title="[list:title]">
+            <h4>[list:date style=M,d,Y]</h4>
+            <div class="title elli">[list:title lencn=20]</div>
+            <div class="p">[list:description lencn=100]</div>
+            </a>
+            <div class="img"> <a href="[list:link]" title=""><img src="[list:ico]" width="100%" alt="[list:title]"></a> </div>
+            <div class="detail"><a href="[list:link]" title="">more<img src="{pboot:sitedomain}/skin/picture/index16.png"></a></div>
+          </div>
+          {/pboot:list}
+          <ul>
+            {pboot:list scode=[sort:scode] num=3 order=sorting}
+            <li> <a href="[list:link]" title="">
+              <div class="title elli">[list:title lencn=24]</div>
+              <div class="p">[list:description lencn=80]</div>
+              <div class="time">[list:date style=M]<br />
+                [list:date style=d,Y]</div>
+              </a> </li>
+            {/pboot:list}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/pboot:sort}
+{pboot:sort scode=1}
+<div class="container-fluid zbg2">
+  <style>
+	.zbg2{ background:url({pboot:sitedomain}/skin/images/index182937000.jpg) no-repeat center bottom #f8f8f8;}
+</style>
+  <div class="container">
+    <div class="c_1530_4">
+      <div class="tit_1">
+        <h3>[sort:name]</h3>
+      </div>
+      {pboot:content scode=1}
+      <div class="c_1530_4_down">
+        <div class="dt"><img src="{pboot:sitedomain}/skin/picture/index19.png"></div>
+        <div class="text"> <a href="[content:link]">
+          <h4>{pboot:companyname}</h4>
+          <div class="p">[content:content drophtml=1 lencn=130]</div>
+          <div class="ico"><img src="{pboot:sitedomain}/skin/picture/index21.png" alt=""></div>
+          </a>
+          <div class="img"><a href="[content:link]"> <img src="[content:ico]" alt="{pboot:companyname}"></a></div>
+        </div>
+      </div>
+      {/pboot:content} </div>
+  </div>
+</div>
+{/pboot:sort}
+</div>
+{include file=foot.html}
+<!--手机导航--> 
+{include file=m_head.html} 
+<!--手机导航end--> 
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script> 
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/respond.src.js"></script> 
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/maodian.0.2.js"></script> 
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/wow.min.js"></script> 
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/public.js"></script> 
+<script type="text/javascript">
+    $(function () {
+        $(".footer_down").css("display", "block");
+        //首页banner
+        $('.slide_banner').slick({
+            dots: true,
+            arrows: false,
+            speed: 1000,
+            autoplay: true,
+            touchMove: false,
+            autoplaySpeed: 8000,
+            fade: false,
+            appendDots: $(".dian")
+        });
+        $('.slide_banner div').css("display", "");
+        $('.slide_pic_1').slick({
+            dots: false,
+            autoplay: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            appendArrows: $("arr"),
+            prevArrow: ".zuo",
+            nextArrow: ".you",
+            //infinite: false,
+            lazyLoad: 'progressive',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+        $('.slide_pic_2').slick({
+            arrows: false,
+            dots: true,
+            autoplay: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            //infinite: false,
+            lazyLoad: 'progressive',
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    })
+    jQuery(".c_1530_3").slide({ mainCell: ".bd", titCell: ".hd li", effect: "fade", delayTime: 0, triggerTime: 0, returnDefault: false });
+</script>
+</body>
+</html>

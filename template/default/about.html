@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta name="format-detection" content="telephone=no" />
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link href="{pboot:sitedomain}/skin/css/bootstrap.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/animate.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/slick.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/slick-theme.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+<script src="{pboot:sitedomain}/skin/js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/slick.min.js"></script>
+<style>
+.c_1530_4 .text h4, .tit_1 h3 {
+	font-family: 'ITC Avant Garde Gothic'!important;
+}
+</style>
+</head>
+<body>
+{include file=head.html}
+<div class="h_155"></div>
+<!--banner--> 
+{include file=n_banner.html} 
+<!--mian-->
+<div id="main" class="pz_main">
+  <div class="container-fluid">
+    <div class="container"> {include file=pos.html} 
+      <script>
+    $('#left_19').addClass('hover');
+    $('#left_wap_19 li').addClass('on');
+   
+
+    var li_num=$('.pz_SideLayer ul li').length;
+    if ($(window).width() < 768) {
+        if (li_num > 3) {
+            $('.pz_SideLayer ul').addClass("hidden-xs");
+            var k = $('#left_wap_19').index();
+            
+            $('.slide_pic_5').slick({
+                arrows: false,
+                dots: false,
+                autoplay: false,
+                slidesToShow: 3.3,
+                slidesToScroll: 1,
+                centerMode: false,
+                centerPadding: '0px',
+                infinite: false,
+                lazyLoad: 'progressive',
+            });
+            if (k + 1 == li_num || k + 2 == li_num) {
+                k = li_num - 3;
+            }
+            $('.slide_pic_5').slick('slickGoTo', k);
+            console.log(k);
+            $('.pz_SideLayer ul').hide();
+
+        } else {
+            $(".slide_pic_5").remove();
+        }
+        
+    }
+</script> 
+    </div>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="c_1530_11 wow fadeInUp">
+          <div class="zbox">
+            <div class="img">{pboot:content id=18}<img src="[content:ico]" alt="about us" />{/pboot:content}</div>
+            <div class="text">
+              <h4>{pboot:companyname}</h4>
+              <div class="p"> {content:content} </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid zbg3" id="culture">
+      <style>
+			    .text h4, .tit_3 h4{font-family: "DIN-Medium"!important; font-weight:bold;}
+                .zbg3 {
+                    background: url({pboot:sitedomain}/skin/images/about124276736.jpg) no-repeat center center;
+                    background-size: cover;
+                    margin-top: 80px;
+                }
+				
+            </style>
+      <div class="container">
+        <div class="c_1530_12">
+          <div class="tit_3 wow fadeInUp">
+            <h4>corporate culture</h4>
+            <!-- <h5>corporate culture</h5>--> 
+          </div>
+          <div class="row">
+            <ul>
+              <li class="wow fadeInRight">
+                <div class="zbox">
+                  <div class="ico"><img src="{pboot:sitedomain}/skin/picture/about45496284.png" alt="policy"></div>
+                  <h4>policy</h4>
+                  <div class="p">Quality First, Customer First</div>
+                </div>
+              </li>
+              <li class="wow fadeInRight">
+                <div class="zbox">
+                  <div class="ico"><img src="{pboot:sitedomain}/skin/picture/about53397926.png" alt="Mission"></div>
+                  <h4>Mission</h4>
+                  <div class="p">Improving Social Productivity</div>
+                </div>
+              </li>
+              <li class="wow fadeInRight">
+                <div class="zbox">
+                  <div class="ico"><img src="{pboot:sitedomain}/skin/picture/about67271802.png" alt="Vision"></div>
+                  <h4>Vision</h4>
+                  <div class="p">Grant whatever is requested</div>
+                </div>
+              </li>
+              <li class="wow fadeInRight">
+                <div class="zbox">
+                  <div class="ico"><img src="{pboot:sitedomain}/skin/picture/about71274289.png" alt="value"></div>
+                  <h4>value</h4>
+                  <div class="p">Customer is God</div>
+                </div>
+              </li>
+              <li class="l1 wow fadeInRight">
+                <div class="zbox">
+                  <div class="ico"><img src="{pboot:sitedomain}/skin/picture/about87376582.png" alt="management"></div>
+                  <h4>management</h4>
+                  <div class="p">Innovation and Openness</div>
+                </div>
+              </li>
+              <li class="l1 wow fadeInRight">
+                <div class="zbox">
+                  <div class="ico"><img src="{pboot:sitedomain}/skin/picture/about95422879.png" alt="personnel"></div>
+                  <h4>personnel</h4>
+                  <div class="p">Fair competition</div>
+                </div>
+              </li>
+              <li class="l1 wow fadeInRight">
+                <div class="zbox">
+                  <div class="ico"><img src="{pboot:sitedomain}/skin/picture/about105749197.png" alt="spirit"></div>
+                  <h4>spirit</h4>
+                  <div class="p">Hospitality is like friendship</div>
+                </div>
+              </li>
+              <li class="l1 wow fadeInRight">
+                <div class="zbox">
+                  <div class="ico"><img src="{pboot:sitedomain}/skin/picture/about118944912.png" alt="Symbolize"></div>
+                  <h4>TEAM</h4>
+                  <div class="p">Unity, cooperation and progress</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid zbg5" >
+      <style>
+                .zbg5 {
+                    background: url({pboot:sitedomain}/skin/images/about243590755.jpg) no-repeat top center;
+                    background-size: cover;
+					padding-bottom:60px;
+                }
+            </style>
+      {pboot:sort scode=2}
+      <div class="container">
+        <div class="c_1530_15" id="factory">
+          <div class="tit_3 wow fadeInUp">
+            <h4>[sort:name]</h4>
+          </div>
+          <div class="row">
+            <div class="slide_pic_8 wow fadeInUp">{pboot:list scode=[sort:scode] num=4 order=sorting}
+              <div>
+                <div class="li">
+                  <div class="zbox">
+                    <div class="img"><img src="[list:ico]" alt="[list:title]"></div>
+                    <div class="name elli">[list:title]</div>
+                  </div>
+                </div>
+              </div>
+              {/pboot:list} </div>
+          </div>
+        </div>
+      </div>
+      {/pboot:sort}
+    </div>
+  </div>
+</div>
+
+<!--down--> 
+
+{include file=foot.html} 
+
+<!--手机导航--> 
+{include file=m_head.html} 
+
+<!--手机导航end--> 
+
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script> 
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/respond.src.js"></script> 
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/maodian.0.2.js"></script> 
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/wow.min.js"></script> 
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/public.js"></script> 
+<script type="text/javascript">
+$(function(){
+	$('.slide_pic_7').slick({
+		dots: false,
+		arrow:true,
+		//autoplay:true,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		//infinite: false,
+		lazyLoad: 'progressive',
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+				slidesToShow: 4,
+				}
+			},
+			{
+			breakpoint: 992,
+				settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1
+				}
+			},
+			{
+			breakpoint: 768,
+			settings: {
+			slidesToShow: 2,
+			slidesToScroll: 1
+				}
+			}
+		]
+	});
+	$('.slide_pic_8').slick({
+		dots: true,
+		arrow:false,
+		autoplay:true,
+		slidesToShow: 4,
+		slidesToScroll: 2,
+		//infinite: false,
+		lazyLoad: 'progressive',
+		responsive: [
+			{
+			breakpoint: 992,
+				settings: {
+				slidesToShow: 3,
+				slidesToScroll: 2
+				}
+			},
+			{
+			breakpoint: 768,
+			settings: {
+			slidesToShow: 2,
+			slidesToScroll: 2
+				}
+			}
+		]
+	});
+	
+})
+        </script>
+</body>
+</html>

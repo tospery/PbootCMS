@@ -1,0 +1,18 @@
+<div class="pz_SideLayer">
+    <ul>
+        
+          {pboot:nav parent={sort:tcode}}
+        <li><a  href="[nav:link]" target="_self" {pboot:if('[nav:scode]'=='{sort:scode}')}class="hover"{/pboot:if}>[nav:name]</a></li>
+          {/pboot:nav}      
+
+	
+    </ul>
+    <div class="slide_pic_5 visible-xs ">
+        
+          {pboot:nav parent={sort:tcode}}
+        <div><li {pboot:if('[nav:scode]'=='{sort:scode}')}class="on"{/pboot:if}><a  href="[nav:link]" target="_self" >[nav:name]</a></li></div>
+          {/pboot:nav}      
+
+	
+    </div>
+</div>

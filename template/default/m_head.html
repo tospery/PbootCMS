@@ -1,0 +1,49 @@
+<div class="pf_menu">
+	<div id="navSlide" class="ph_menu">
+		<div class='nav_box'>
+
+   
+            <li class="nli">
+				<p><span><a href="{pboot:sitedomain}/" target="_self" class="l1_a">Home</a><svg></svg></span></p>
+                
+			</li>
+            
+        {pboot:nav} 
+            <li class="nli">
+				<p><span><a href="[nav:link]" target="_self" class="l1_a">[nav:name]</a><svg></svg></span></p>
+         {pboot:if([nav:soncount]>0)}
+                <ul class="l2_ul">
+          {pboot:2nav parent=[nav:scode]}
+                                <li class="l2">
+                                    <a class="l2_a" href="[2nav:link]" target="_self">[2nav:name]</a><i></i>
+                                </li>
+          {/pboot:2nav} 
+	          </ul>
+        {/pboot:if}
+			</li>
+        {/pboot:nav}
+            
+	   
+       
+	
+
+		</div> 
+<script>
+    $('.nav_box .nli').each(function () {
+        if ($(this).find('.l2_ul').length > 0) {
+            $(this).find('p a').attr('href', 'javascript:;');
+        } else {
+            $(this).find('p svg').remove();
+        }
+    })
+    $('.nav_box .l2').each(function () {
+        if ($(this).find('.l3_ul').length > 0) {
+            $(this).find('.l2_a').attr('href', 'javascript:;');
+        } else {
+            $(this).find('i').remove();
+        }
+    })
+</script>
+
+	</div>
+</div>

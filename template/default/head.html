@@ -1,0 +1,24 @@
+<div id="top" class="pz_top">
+  <div class="top container-fluid" id="header">
+    <div class="container">
+      <div class="logo"><a href="{pboot:sitedomain}/"><img src="{pboot:sitelogo}" alt="" /></a></div>
+      <div class="menu">
+        <ul>
+          <li class="nli"> <span><a href="{pboot:sitedomain}/">Home</a></span> </li>
+          {pboot:nav}
+          <li class="nli {pboot:if('[nav:scode]'=='{sort:tcode}')}on{/pboot:if}"> <span><a href="[nav:link]">[nav:name]</a></span> {pboot:if([nav:soncount]>0)}
+            <ul class="sub">
+              {pboot:2nav parent=[nav:scode]}
+              <li class="l2"> <a class="l2_a" href="[2nav:link]">[2nav:name]</a> </li>
+              {/pboot:2nav}
+            </ul>
+            {/pboot:if} </li>
+          {/pboot:nav}
+        </ul>
+      </div>
+      <div class="menuph" id="menuph">
+        <div class="point"> <span class="navbtn"></span> </div>
+      </div>
+    </div>
+  </div>
+</div>

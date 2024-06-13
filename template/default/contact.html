@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta name="format-detection" content="telephone=no" />
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link href="{pboot:sitedomain}/skin/css/bootstrap.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/animate.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/slick.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/slick-theme.css" rel="stylesheet" />
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+<script src="{pboot:sitedomain}/skin/js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/slick.min.js"></script>
+<style>
+
+.c_1530_4 .text h4, .tit_1 h3 {
+
+    font-family: 'ITC Avant Garde Gothic'!important;
+	
+}
+
+</style>
+    
+</head>
+<body>
+{include file=head.html}
+
+<style>
+.c_1530_9 .content1 .c_1010 .dd li h5{ font-family: "DIN-Medium"!important; font-weight:bold;}
+</style>   
+<div class="h_155"></div>
+<!--banner-->
+{include file=n_banner.html}
+<!--mian-->
+<div id="main" class="pz_main">
+	<div class="container-fluid">
+    	<div class="container">
+{include file=pos.html}
+
+<script>
+
+    var li_num=$('.pz_SideLayer ul li').length;
+    if ($(window).width() < 768) {
+        if (li_num > 3) {
+            $('.pz_SideLayer ul').addClass("hidden-xs");
+            var k = $('#left_wap_6').index();
+            
+            $('.slide_pic_5').slick({
+                arrows: false,
+                dots: false,
+                autoplay: false,
+                slidesToShow: 3.3,
+                slidesToScroll: 1,
+                centerMode: false,
+                centerPadding: '0px',
+                infinite: false,
+                lazyLoad: 'progressive',
+            });
+            if (k + 1 == li_num || k + 2 == li_num) {
+                k = li_num - 3;
+            }
+            $('.slide_pic_5').slick('slickGoTo', k);
+            console.log(k);
+            $('.pz_SideLayer ul').hide();
+
+        } else {
+            $(".slide_pic_5").remove();
+        }
+        
+    }
+</script>
+
+
+            <div class="c_1530_9">
+            	<div class="content1">
+                	<div class="c_1010 wow fadeInLeft">
+                    	<div class="dt">
+                        	<h3>Contact us</h3>
+                           <!-- <h5>{pboot:companyname}</h5>-->
+                        </div>
+                        <div class="dd bglight">
+
+		                    <li style="width:100%">
+                            	<div class="ico"><img src="{pboot:sitedomain}/skin/picture/lxwmaddress.png" alt="address"></div>
+                                <h5>Address:</h5>
+                                <h6>{pboot:companyaddress}</h6>
+                            </li>
+	
+	
+
+                        </div>
+                        <div class="dd bgdark">
+                     
+		                    <li>
+                            	<div class="ico"><img src="{pboot:sitedomain}/skin/picture/lxwmtel.png" alt="Hotline"></div>
+                                <h5>Phone:</h5>
+                                <h6>{pboot:companyphone}</h6>
+                                <h6>{pboot:companymobile}</h6>
+                            </li>
+	
+		                    <li>
+                            	<div class="ico"><img src="{pboot:sitedomain}/skin/picture/lxwmemail.png" alt="email"></div>
+                                <h5>Email:</h5>
+                                <h6>{pboot:companyemail}</h6>
+                       
+                            </li>
+
+
+                        </div>
+  
+                        <div class="dd bglight">
+  
+
+		                    <li>
+                            	<div class="ico"><img src="{pboot:sitedomain}/skin/picture/lxwmfax.png" alt="fax"></div>
+                                <h5>Fax:</h5>
+                                <h6>{pboot:companyfax}</h6>
+    
+                            </li>
+                            <li>
+                                <div class="ico"><img src="{pboot:sitedomain}/skin/picture/lxwmqq.png" alt="qq"></div>
+                                <h5>QQ:</h5>
+                                <h6>{pboot:companyqq}</h6>
+                            </li>
+    
+	
+                        </div>
+                        <!--
+						<div class="dd bgdark">
+                     
+		                    <li>
+                            	<div class="ico"><img src="{pboot:sitedomain}/skin/picture/lxwmskype.png" alt="address"></div>
+                                <h5>Skype:</h5>
+                                <h6>{label:skype}</h6>
+                            </li>
+	
+		                    <li>
+                            	<div class="ico"><img src="{pboot:sitedomain}/skin/picture/lxwmawhatsapp.png" alt="address"></div>
+                                <h5>Whatsapp:</h5>
+                                <h6>{label:whatsapp}</h6>
+                            </li>
+	
+
+                        </div>
+                        -->
+                        
+                    </div>
+                    <div class="c_490 wow fadeInRight">
+                    	<h4>Wechat scanner</h4>
+                        <div class="ewm"><p><img src="{pboot:companyweixin}" title="erweima.jpg" alt="wechat"/></p></div>
+                        <h5>Chat with me</h5>
+                        <h6>Sincerely welcome your inquiry</h6>
+                    </div>
+                </div>
+<!--                <div class="content2 wow fadeInUp">
+                	<div id="bdmap_1">加载中...</div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <!--down-->
+{include file=foot.html}
+
+<!--手机导航-->
+{include file=m_head.html}
+						
+<!--手机导航end-->
+
+    <script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script>
+
+    <script type="text/javascript" src="{pboot:sitedomain}/skin/js/respond.src.js"></script>
+    <script type="text/javascript" src="{pboot:sitedomain}/skin/js/maodian.0.2.js"></script>
+    <script type="text/javascript" src="{pboot:sitedomain}/skin/js/wow.min.js"></script>
+    <script type="text/javascript" src="{pboot:sitedomain}/skin/js/public.js"></script>
+    
+
+    
+</body>
+</html>
